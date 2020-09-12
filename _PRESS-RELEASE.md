@@ -18,27 +18,36 @@ Once the project moves into development, the press release can be used as a touc
  
 ## Heading ##
   > Name the product in a way the reader (i.e. your target customers) will understand.
+  COLTRANE: An app for music visualization
 
 ## Sub-Heading ##
   > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+  This will appeal to anyone who would like to listen to music with a pretty display
 
 ## Summary ##
   > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+  COLTRANE Is a music visualisation app. Rather than just listening, users can experience customizable waveform vilualizations of their music. Users can upload mp3 files to a shared space and select the song they'd like to listen to. Upon selection, a styled waveform will appear displaying a visualization of the music. 
 
 ## Problem ##
   > Describe the problem your product solves.
+  It acts as an alternitive to soundcloud and spotify, giving a more customizable experience
 
 ## Solution ##
   > Describe how your product elegantly solves the problem.
+  users a presented with an elegant waveform, and if time allows, will be able to change certain features of the wavform such as style and color.
 
 ## Quote from You ##
   > A quote from a spokesperson in your company.
+  COLTRANE is the next best thing in the music space, choosing to focus of visuals rather than neglect them.
 
 ## How to Get Started ##
   > Describe how easy it is to get started.
+  All a user has to de to get startd is the select the mp3 they'd like to listen to.
 
 ## Customer Quote ##
   > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+  "COLTRANE ravolutionazed my music experience. No longer was I stuck stareing at a boring interface for my music!
 
 ## Closing and Call to Action ##
   > Wrap it up and give pointers where the reader should go next.
+  Visit COLTRANE yourself and give it a try! You won't go back. 
