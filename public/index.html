@@ -1,12 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
   </head>
   <body>
-    <audio src="Roll One Up, Homie.mp3"></audio>
-    <button data-playing="false" role="switch" aria-checked="false" id="toggle">
-      <span>Play/Pause</span>
-  </button>
+    <audio src="Zelda & Chill Ocarina of Time Mikel Lofi Remix.mp3"></audio>
+    <div id="title-container">
+      <h1>COLTRANE</h1>
+      <h3>An audio experience</h3>
+    </div>
+    <div id="playButton">
+      <button data-playing="false" role="switch" aria-checked="false" id="toggle">
+        <span>Play/Pause</span>
+      </button>
+    </div>
+    <div id="vSelector">
+      <button id="circle">Use the circular visual</button>
+      <button id="wave">Use the waveform</button>
+      <button id="graph">Use the bar graph</button>
+    </div>
+    <div id="colors">
+      <button id="greenTheme">Green Theme</button>
+      <button id="blueTheme">Blue Theme</button>
+      <button id="purpleTheme">Purple Theme</button>
+      <button id="orangeTheme">Orange Theme</button>
+    </div>
     <script defer src="p5.js"></script>
     <script src="sketch.js"></script>
   </body>
