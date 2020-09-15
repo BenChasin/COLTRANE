@@ -4,28 +4,35 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
   </head>
   <body>
-    <audio src="Zelda & Chill Ocarina of Time Mikel Lofi Remix.mp3"></audio>
+    <audio src="./storage/Zelda & Chill Ocarina of Time Mikel Lofi Remix.mp3" id="audioPlaying"></audio>
     <div id="title-container">
-      <h1>COLTRANE</h1>
-      <h3>An audio experience</h3>
+      <h1 class="txt">COLTRANE</h1>
+      <h3 class="txt">An audio experience</h3>
     </div>
-    <div id="playButton">
-      <button data-playing="false" role="switch" aria-checked="false" id="toggle">
-        <span>Play/Pause</span>
-      </button>
-    </div>
-    <div id="vSelector">
-      <button id="circle">Use the circular visual</button>
-      <button id="wave">Use the waveform</button>
-      <button id="graph">Use the bar graph</button>
-    </div>
-    <div id="colors">
-      <button id="greenTheme">Green Theme</button>
-      <button id="blueTheme">Blue Theme</button>
-      <button id="purpleTheme">Purple Theme</button>
-      <button id="orangeTheme">Orange Theme</button>
+    <div id="btnCtn">
+      <div id="playButton">
+        <button data-playing="false" role="switch" aria-checked="false" id="toggle">
+          <span>Play/Pause</span>
+        </button>
+      </div>
+      <div id="vSelector">
+        <button class="Btn" id="circle">Use the circular visual</button>
+        <button class="Btn" id="wave">Use the waveform</button>
+        <button class="Btn" id="graph">Use the bar graph</button>
+      </div>
+      <div id="colors">
+        <button class="Btn" id="greenTheme">Green Theme</button>
+        <button class="Btn" id="blueTheme">Blue Theme</button>
+        <button class="Btn" id="purpleTheme">Purple Theme</button>
+        <button class="Btn" id="orangeTheme">Orange Theme</button>
+      </div>
+      <div id="selection">
+        <label class="txt" for="song">Select The Song</label>
+        <select name="song" id="song"></select>
+      </div>
     </div>
     <script defer src="p5.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
     <script src="sketch.js"></script>
   </body>
 </html>

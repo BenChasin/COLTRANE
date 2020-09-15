@@ -1,15 +1,99 @@
 /* canvas {
   margin-left: 500px;
 } */
+@font-face {
+  font-family: Righteous;
+  src: url(fonts/Righteous-Regular.ttf);
+}
 
-/* h1 { */
-  /* margin: auto;
-} */
+body {
+  background-color: rgb(50, 50, 50);
+}
+
+h1 {
+  font-family: Righteous;
+  color: rgb(130, 22, 192);
+}
 
 h3 {
-  /* margin-left: 45%; */
+  font-family: Righteous;
+  color: rgb(130, 22, 192);
+  margin-bottom: 40px;
+}
+
+#playButton {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+#toggle {
+  margin: auto;
+}
+
+#selection {
+  text-align: center;
+  margin-top: 45px;
 }
 
 #title-container {
   text-align: center;
+}
+
+#vSelector {
+  width: 50%;
+  margin: auto;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#colors {
+  width: 75%;
+  margin: auto;
+  margin-top: 45px;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+	background-color: rgb(50, 50, 50);
+	border-radius:33px;
+  border: 2px solid rgb(130, 22, 192);
+	display:inline-block;
+	cursor:pointer;
+	color:rgb(130, 22, 192);
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	padding:10px 27px;
+	text-decoration:none;
+}
+button:hover {
+	background-color:#a0a0a0;
+}
+button:active {
+	position:relative;
+	top:1px;
+}
+
+label {
+  color:rgb(130, 22, 192);
+	font-family:Arial;
+	font-size:17px;
+  font-weight:bold;
+  margin-right: 10px;
+}
+
+select {
+  background-color: rgb(50, 50, 50);
+	border-radius:33px;
+  border: 2px solid rgb(130, 22, 192);
+	display:inline-block;
+	cursor:pointer;
+	color:rgb(130, 22, 192);
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	padding:10px 27px;
+	text-decoration:none;
 }

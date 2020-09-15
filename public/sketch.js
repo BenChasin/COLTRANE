@@ -1,6 +1,5 @@
 let fft;
 let audioContext;
-const audioElement = document.querySelector('audio');
 let track;
 let analyser;
 let dataArray;
@@ -8,6 +7,10 @@ let selected = 'circle';
 let theme = [130, 22, 192];
 let itCount = 1;
 let currAmp = 40;
+let songs = {};
+let currentSong;
+
+const audioElement = document.querySelector('audio');
 
 document.getElementById('circle').addEventListener('click', () => {
   selected = 'circle';
@@ -22,23 +25,78 @@ document.getElementById('graph').addEventListener('click', () => {
 });
 
 document.getElementById('greenTheme').addEventListener('click', () => {
-  theme = [26, 151, 30];
+  theme = [2, 139, 2];
+  changeTheme();
 })
 
 document.getElementById('purpleTheme').addEventListener('click', () => {
   theme = [130, 22, 192];
+  changeTheme();
 })
 
 document.getElementById('orangeTheme').addEventListener('click', () => {
-  theme = [228, 63, 4]
+  theme = [228, 63, 4];
+  changeTheme();
 })
 
 document.getElementById('blueTheme').addEventListener('click', () => {
-  theme = [4, 228, 228]
+  theme = [4, 228, 228];
+  changeTheme();
+});
+
+const changeTheme = () => {
+  let b = document.querySelectorAll('button');
+  b.forEach((button) => {
+    button.style.border = `2px solid rgb(${[...theme]})`;
+    button.style.color = `rgb(${[...theme]})`;
+  });
+  let t = document.getElementsByClassName('txt');
+  for (let text of t) {
+    text.style.color = `rgb(${[...theme]})`;
+  };
+  let s = document.querySelectorAll('select');
+  s.forEach((select) => {
+    select.style.border = `2px solid rgb(${[...theme]})`;
+    select.style.color = `rgb(${[...theme]})`;
+  });
+}
+
+let s = document.getElementById('song')
+s.addEventListener('change', () => {
+  let selectedSong = s.options[s.selectedIndex].value;
+  let newUrl = songs[selectedSong].url
+  document.getElementById('audioPlaying').src = newUrl;
 })
 
+const requestSetup = () => {
+  $.ajax({
+    type: 'GET',
+    url: '/api/music',
+    contentType: 'application/json',
+    success: (data) => {
+      populateSelect(data);
+    },
+    error: (err) => {
+      console.log('error in get', err);
+    }
+  })
+};
+
+requestSetup();
+const populateSelect = (data) => {
+  let select = document.getElementById("song");
+  for (let obj of data) {
+    songs[obj.title] = {
+      url: obj.url,
+      genre: obj.genre
+    };
+    select.options[select.options.length] = new Option(obj.title, obj.title);
+  }
+
+}
+
 function setup() {
-  createCanvas(1900, 550);
+  createCanvas(1900, 450);
   angleMode(DEGREES);
 }
 
@@ -65,7 +123,6 @@ function draw() {
           }
           if (itCount === 1) {
             currAmp = 40 + (amp / 30)
-            console.log(currAmp)
           }
         }
         let r = map(freq, 1, 250, 5, 250);
