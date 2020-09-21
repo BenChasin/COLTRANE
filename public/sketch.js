@@ -125,11 +125,11 @@ function draw() {
             currAmp = 40 + (amp / 30)
           }
         }
-        let r = map(freq, 1, 250, 5, 250);
+        let rad = map(freq, 1, 250, 5, 250);
         let y1 =  currAmp * sin(angle);
         let x1 =  currAmp * cos(angle);
-        let y2 = r * sin(angle);
-        let x2 = r * cos(angle);
+        let y2 = rad * sin(angle);
+        let x2 = rad * cos(angle);
         line(x1, y1, x2, y2);
       }
     } else if (selected === 'wave') {
