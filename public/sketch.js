@@ -87,8 +87,7 @@ const populateSelect = (data) => {
   let select = document.getElementById("song");
   for (let obj of data) {
     songs[obj.title] = {
-      url: obj.url,
-      genre: obj.genre
+      url: obj.url
     };
     select.options[select.options.length] = new Option(obj.title, obj.title);
   }
