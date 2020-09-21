@@ -23,10 +23,6 @@ Start the server
 ```
 npm start
 ```
-Build the bundle.js
-```
-npm run build
-```
 ### API
 GET music info
 ```
