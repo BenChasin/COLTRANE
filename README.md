@@ -5,7 +5,7 @@
 ![COLTRANE Demo](demo/coltrane.gif)
 
 ## Description
-This is a customizable music dashboard made in a 24 hour code sprint. Sample mp3s are provided, and additional mp3s can be added in public/storage. If an mp3 is added, make sure to send a post request with the relevant info to the server.
+This is a customizable music dashboard made in a code sprint. Sample mp3s are provided, and additional mp3s can be added in public/storage. If an mp3 is added, make sure to send a post request with the relevant info to the server.
 
 ## Requirements
 
